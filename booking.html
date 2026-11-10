@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR CINEMA - Ticket Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark px-4">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-danger" href="index.html">🎬 STAR CINEMA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule & Prices</a></li>
+                        <li class="nav-item"><a class="nav-link" href="media.html">Media & Trailers</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="booking.html">Ticket Booking</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg p-4 border border-danger">
+                    <h2 class="text-center mb-4 text-warning">Luxury Cinema Ticket Booking Form</h2>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Your booking request has been received successfully!');">
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Full Name:</label>
+                            <input type="text" class="form-control bg-secondary text-white border-0" placeholder="Enter your name here" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email Address:</label>
+                            <input type="email" class="form-control bg-secondary text-white border-0" placeholder="example@gmail.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Account Password:</label>
+                            <input type="password" class="form-control bg-secondary text-white border-0" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Number of Tickets:</label>
+                            <input type="number" class="form-control bg-secondary text-white border-0" min="1" max="10" value="1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Booking Date:</label>
+                            <input type="date" class="form-control bg-secondary text-white border-0" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Select Movie:</label>
+                            <select class="form-select bg-secondary text-white border-0">
+                                <option>Spider-Man: Brand New Day</option>
+                                <option>محمود التاني</option>
+                                <option>صقر و كناريا</option>
+                                <option>7dogs</option>
+                                <option>The Odyssey</option>
+                                <option>Demon Slayer</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label d-block">Seat Type:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="seat" id="reg" checked>
+                                <label class="form-check-label" for="reg">Regular</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="seat" id="vip">
+                                <label class="form-check-label" for="vip">VIP (+50 EGP)</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label d-block">Add-ons & Snacks:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="pop">
+                                <label class="form-check-label" for="pop">Popcorn & Drink</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="glass">
+                                <label class="form-check-label" for="glass">3D Glasses</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Additional Notes:</label>
+                            <textarea class="form-control bg-secondary text-white border-0" rows="3" placeholder="Your notes..."></textarea>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-danger btn-lg shadow">Confirm & Complete Booking</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white text-center py-4 border-top border-secondary">
+        <p class="mb-1">All Rights Reserved - STAR CINEMA © 2026</p>
+        <p class="small text-muted mb-0">Student: Mahmoud Mostafa Mahmoud | ID: 224130830</p>
